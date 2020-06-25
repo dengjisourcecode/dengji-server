@@ -71,7 +71,7 @@ router.get("/get", function (req, res, next) {
   };
   let data = req.query;
   let currrecord = 0;
-  let [btime, etime, username, currnum = 0, pagenums = 20] = [
+  let [btime, etime, username, currnum = 1, pagenums = 20] = [
     data.btime,
     data.etime,
     data.username,
@@ -96,7 +96,7 @@ router.get("/get", function (req, res, next) {
   }
   str += ` order by createtime desc`;
   str += ` limit ${currrecord},${pagenums}`;
-
+  console.log(str);
   query(str, function (err, vals, fields) {
     if (err === null) {
       (result.code = 200), (result.message = "",result.data = vals);
