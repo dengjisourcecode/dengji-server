@@ -115,7 +115,7 @@ router.get("/export", function (req, res, next) {
   };
   let data = req.query;
   let currrecord = 0;
-  let [btime, etime, username, currnum = 0, pagenums = 20] = [
+  let [btime, etime, username, currnum = 1, pagenums = 20] = [
     data.btime,
     data.etime,
     data.username,
