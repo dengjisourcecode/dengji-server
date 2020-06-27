@@ -5,7 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var infoRouter = require('./routes/info');
-var infoRouter = require('./routes/infodacang');
+var infodacangRouter = require('./routes/infodacang');
 var app = express();
 
 // view engine setup
