@@ -6,6 +6,7 @@ var logger = require('morgan');
 
 var infoRouter = require('./routes/info');
 var infodacangRouter = require('./routes/infodacang');
+var infojiangpuyuanRouter = require('./routes/infojiangpuyuan');
 var app = express();
 
 // view engine setup
@@ -27,6 +28,7 @@ app.all('*', function (req, res, next) {
 });
 app.use('/info', infoRouter);
 app.use('/infodacang', infodacangRouter);
+app.use('/infojiangpuyuan', infojiangpuyuanRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
